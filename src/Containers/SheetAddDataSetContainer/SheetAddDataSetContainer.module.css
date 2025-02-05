@@ -1,0 +1,79 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	z-index: 10;
+	font-weight: 300;
+	height: 100%;
+}
+
+.title {
+	font-weight: 300;
+	text-align: center;
+}
+
+.root .button_close {
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: transparent;
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.icon_close path {
+	stroke: #fff;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	overflow-y: scroll;
+	padding-bottom: 100px;
+}
+
+.content::-webkit-scrollbar {
+	display: none;
+}
+.icon_select_button {
+	width: 50px;
+	height: 50px;
+}
+.icon_select_button_icon path {
+	stroke: #ffffffa6;
+}
+
+.confirm_button {
+	width: 50px;
+	height: 50px;
+	margin-left: auto;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background: #40a5e4cc;
+}
+
+.confirm_button_icon path {
+	stroke: #fff;
+}
+
+.confirm_button:disabled {
+	background: #1b394b;
+	pointer-events: none;
+	border-color: #28516b;
+}
+
+.confirm_button:disabled .confirm_button_icon path {
+	stroke: #999696;
+}

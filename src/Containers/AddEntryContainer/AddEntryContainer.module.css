@@ -1,0 +1,151 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	height: 100%;
+}
+
+.title {
+	font-weight: 300;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+	font-size: 18px;
+	color: var(--current-color, var(--color-accent));
+}
+
+.root .button_close {
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: transparent;
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.icon_close path,
+.icon path {
+	stroke: #fff;
+}
+
+.name_col {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: var(--current-color, var(--color-accent));
+}
+
+.icon {
+	height: 18px;
+	width: auto;
+}
+
+.icon_wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.icon path {
+	stroke: var(--current-color, var(--color-accent));
+}
+
+.calendar_wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.buttons_row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttons_row .calendar_button {
+	font-size: 16px;
+	font-weight: 300;
+	--color: var(--current-color);
+}
+.calendar_button_content {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.calendar_button_icon path {
+	stroke: var(--current-color, var(--color-accent));
+	stroke-width: 1.5px;
+}
+.calendar_button_icon {
+	height: 18px;
+	width: auto;
+}
+
+.input_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 3;
+}
+.input_wrapper .input {
+	position: relative;
+	--color: var(--current-color, var(--color-accent));
+}
+.confirm_button {
+	width: 50px;
+	height: 50px;
+	margin-left: auto;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	--color: var(--current-color, var(--color-accent));
+}
+
+.confirm_button_icon path {
+	stroke: #fff;
+}
+
+.confirm_button:disabled {
+	pointer-events: none;
+	opacity: 0.7;
+}
+
+.confirm_button:disabled .confirm_button_icon path {
+	stroke: #ffffff;
+}
+
+.img {
+	width: 80%;
+	height: auto;
+	margin: auto;
+	filter: var(--filter);
+	opacity: 0.5;
+	animation: float 4s ease-in-out infinite both;
+}
+
+.root .modal_date_picker {
+	--current-fill-color: --current-color;
+}
+@keyframes float {
+	0% {
+		transform: translateY(5%);
+		/* box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4); */
+	}
+
+	50% {
+		transform: translateY(10%);
+		/* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7); */
+	}
+
+	100% {
+		transform: translateY(5%);
+		/* box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4); */
+	}
+}

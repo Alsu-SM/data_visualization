@@ -1,0 +1,15 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+.button {
+	width: 100%;
+	box-sizing: border-box;
+	--color: var(--line-color);
+	font-weight: 400;
+}

@@ -1,0 +1,6 @@
+{
+	"name": "@packages/charts",
+	"version": "0.0.1",
+	"main": "./src/index.tsx",
+	"packageManager": "yarn@4.0.2"
+}

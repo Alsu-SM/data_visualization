@@ -1,0 +1,33 @@
+.root {
+	width: calc(100vw - 16px);
+	background: var(--color-black-bg);
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -100%;
+	z-index: 10;
+	transition: bottom 0.5s ease-in-out;
+	box-sizing: border-box;
+	z-index: 101;
+	border-radius: 8px 8px 0 0;
+}
+
+.shown {
+	bottom: 0;
+}
+
+.overlay {
+	position: fixed;
+	width: 0;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background: transparent;
+	z-index: 100;
+	transition: background 0.4s;
+}
+
+.overlay__shown {
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.2);
+}

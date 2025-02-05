@@ -1,0 +1,14 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.dataset_wrapper {
+	background: transparent;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-family: var(--font-family);
+	font-size: 16px;
+}

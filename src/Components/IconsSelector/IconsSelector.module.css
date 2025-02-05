@@ -1,0 +1,27 @@
+.content {
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.icons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 40px);
+	gap: 20px;
+}
+
+.content .icon_button {
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+.content .icon_button:hover,
+.content .icon_button:focus {
+	background: transparent;
+}
+
+.icon path {
+	stroke: #ffffffa6;
+}

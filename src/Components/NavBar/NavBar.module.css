@@ -1,0 +1,152 @@
+.root {
+	position: fixed;
+	z-index: 10;
+	left: 20px;
+	top: 20px;
+	padding: 0px;
+	opacity: 0.5;
+	display: flex;
+	flex-direction: column;
+	background: #00000082;
+	border-radius: 8px;
+	backdrop-filter: blur(4px);
+	transition: all 0.4s;
+
+	width: 55px;
+	overflow: hidden;
+	transition: all 0.4s;
+	--webkit-backface-visibility: hidden;
+}
+
+.navigation {
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.4s;
+}
+
+ .burger_button {
+	height: 55px;
+	width: auto;
+	z-index: 3;
+	width: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.burger_icon {
+	padding: 15px;
+	border-radius: 8px;
+}
+
+.root:hover{
+	opacity: 1;
+}
+
+.root:not(.menu__open):hover .navigation {
+	height: 387px;
+}
+.menu__open {
+	height: auto;
+	width: 250px;
+	opacity: 1;
+}
+
+.menu__open .navigation {
+	height: 387px;
+	width: 250px;
+}
+.burger_button, .link {
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0px;
+	margin: 0;
+	border-radius: 8px;
+	cursor: pointer;
+	height: 55px;
+	box-sizing:border-box
+}
+.link {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	color: #ffffff;
+	font-size: 18px;
+	transition: all 0.2s;
+}
+ .link_active {
+	background: #40a5e477;
+}
+.link:hover {
+	background: #40a5e4a3;
+}
+.nav_icon {
+	padding: 15px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	height: 55px;
+	width: 55px;
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+.link_active .nav_icon
+{
+	background: #40a5e477;
+}
+.link:hover .nav_icon
+{
+	background: #40a5e4a3;
+}
+.link:hover .nav_icon path, 
+.link_active .nav_icon path{
+	stroke: #00386c;
+}
+.nav_label {
+	padding: 0 15px 0 5px;
+}
+.nav_icon svg path, .burger_icon path
+{
+	stroke: var(--color-accent);
+}
+
+
+.menu_toggle_bar {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+.menu_toggle_bar__top {
+	transform: translate(0, -8px);
+
+}
+.menu_toggle_bar__bottom {
+	transform: translate(0, 8px);
+
+}
+
+.menu__open .menu_toggle_bar__top {
+	transform: translate(0, 0) rotate(45deg);
+}
+.menu__open .menu_toggle_bar__middle {
+	opacity: 0;
+
+}
+.menu__open .menu_toggle_bar__bottom {
+	transform: translate(0, 0) rotate(-45deg);
+}
+
+.burger_icon {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	box-sizing: border-box;
+}

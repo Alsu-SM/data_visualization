@@ -1,0 +1,23 @@
+.root {
+	display: grid;
+	grid-template-columns: repeat(var(--items-count, 2), 1fr);
+	gap: 30px;
+}
+
+.item {
+	width: 100%;
+}
+.item_content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: #ffffffcc;
+	font-weight: 300;
+}
+.icon_wrapper path {
+	stroke: #ffffffa6;
+}
+
+.item.item__selected {
+	background: #40a5e488;
+}

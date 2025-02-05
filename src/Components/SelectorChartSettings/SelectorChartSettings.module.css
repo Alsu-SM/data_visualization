@@ -1,0 +1,16 @@
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.button {
+	width: 100%;
+	color: #fff;
+	font-weight: 300;
+	height: 50px;
+}
+
+.button__active {
+	background: #40a5e488;
+}

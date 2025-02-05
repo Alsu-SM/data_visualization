@@ -1,0 +1,15 @@
+.root {
+	border-width: 2px;
+	background: #40a5e4cc;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	position: fixed;
+	z-index: 10;
+	bottom: 20px;
+	right: 20px;
+}
+
+.root .icon path {
+	stroke: #fff;
+}
