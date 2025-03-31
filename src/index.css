@@ -18,7 +18,7 @@ body {
 	margin: 0;
 	display: flex;
 	min-width: 320px;
-	min-height: 100vh;
+	min-height: 100dvh;
 	background-color: var(--color-black-bg);
 	color: var(--color-white-font-title);
 	overflow-x: hidden;
@@ -40,7 +40,7 @@ body {
 
 #root {
 	flex-grow: 1;
-	height: 100vh;
+	height: 100dvh;
 }
 
 .page {

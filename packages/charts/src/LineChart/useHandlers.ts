@@ -1,7 +1,6 @@
-import { CANVAS_HEIGHT, CANVAS_PADDING, CANVAS_WIDTH } from "../Shared/constants";
-import { DataItem } from "../Shared/types";
-import { Vertices } from "./types";
-
+import { CANVAS_PADDING } from '../Shared/constants';
+import { DataItem } from '../Shared/types';
+import { Vertices } from './types';
 
 function useHandlers(width: number, height: number) {
 	function drawByArea(
@@ -160,20 +159,26 @@ function useHandlers(width: number, height: number) {
 	) {
 		const newLocal = height - CANVAS_PADDING * 2;
 		const unitSize = (newLocal / maxValue) * 0.9;
-		const unitSizeX = (width - CANVAS_PADDING * 2) / (+maxDate +  24*60*60*1000 - +minDate);
-		const offsetSize = unitSizeX * 24*60*60*1000;
-		const x0 = CANVAS_PADDING + offsetSize/2+unitSizeX*(+data[0].date)/(+maxDate);
+		const unitSizeX =
+			(width - CANVAS_PADDING * 2) /
+			(+maxDate + 24 * 60 * 60 * 1000 - +minDate);
+		const offsetSize = unitSizeX * 24 * 60 * 60 * 1000;
+		const x0 =
+			CANVAS_PADDING + offsetSize / 2 + (unitSizeX * +data[0].date) / +maxDate;
 		const y0 = height - CANVAS_PADDING - unitSize * data[0].value;
 		const vertices: Vertices[] = [];
 		vertices.push({ x: x0, y: y0 });
 
 		for (let i = 1; i < data.length; i++) {
-			const xi = CANVAS_PADDING + offsetSize/2 + unitSizeX*(+data[i].date - +minDate);
+			const xi =
+				CANVAS_PADDING +
+				offsetSize / 2 +
+				unitSizeX * (+data[i].date - +minDate);
 			const yi = height - CANVAS_PADDING - unitSize * data[i].value;
-			console.log(+data[i].date, unitSizeX, maxDate, minDate)
+			console.log(+data[i].date, unitSizeX, maxDate, minDate);
 			vertices.push({ x: xi, y: yi });
 		}
-		
+
 		console.log(vertices);
 		if (isFieldFilled) {
 			drawByArea(vertices, context, areCornersSmoothed, fillColor);
